@@ -1,0 +1,39 @@
+.trustRow {
+  background-color: var(--color-white);
+  padding: var(--spacing-xl) 0;
+  border-bottom: 1px solid #eee;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.title {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .item {
+    justify-content: flex-start;
+  }
+}

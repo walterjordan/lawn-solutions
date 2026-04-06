@@ -1,0 +1,14 @@
+node_modules
+.next
+.git
+.github
+Dockerfile
+.dockerignore
+package-lock.json
+npm-debug.log
+README.md
+.env
+.env.local
+.env.development
+.env.test
+.env.production

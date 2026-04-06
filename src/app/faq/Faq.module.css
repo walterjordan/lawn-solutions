@@ -1,0 +1,110 @@
+.page {
+  background-color: var(--color-white);
+}
+
+.hero {
+  background-color: var(--color-primary);
+  padding: var(--spacing-3xl) 0;
+  text-align: center;
+}
+
+.faqSection {
+  padding: var(--spacing-3xl) 0;
+}
+
+.faqWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.category {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.categoryTitle {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-secondary);
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  border-bottom: 1px solid #eee;
+}
+
+.question {
+  width: 100%;
+  text-align: left;
+  padding: var(--spacing-lg) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 1.125rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.active {
+  max-height: 300px;
+  padding-bottom: var(--spacing-lg);
+}
+
+.answer p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* CTA Strip */
+.ctaStrip {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-3xl) 0;
+  text-align: center;
+}
+
+.ctaTitle {
+  color: var(--color-white);
+  font-size: 2rem;
+  margin-bottom: var(--spacing-2xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-2xl);
+}
+
+.phoneLink {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .ctaButtons {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+}

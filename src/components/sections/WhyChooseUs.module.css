@@ -1,0 +1,82 @@
+.section {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--color-white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+}
+
+.title {
+  margin-bottom: var(--spacing-lg);
+}
+
+.body {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-2xl);
+  font-size: 1.125rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.point {
+  position: relative;
+  padding-left: var(--spacing-2xl);
+}
+
+.point::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.pointTitle {
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-primary);
+}
+
+.pointDescription {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .imagePlaceholder {
+    order: -1;
+  }
+}

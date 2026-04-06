@@ -1,0 +1,200 @@
+.header {
+  height: var(--header-height);
+  background-color: var(--color-white);
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.logo span {
+  color: var(--color-secondary);
+}
+
+.nav {
+  display: flex;
+}
+
+.navLinks {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.navLinks a {
+  font-weight: 600;
+  color: var(--color-neutral-dark);
+  transition: color 0.2s;
+  font-size: 0.9375rem;
+}
+
+.navLinks a:hover {
+  color: var(--color-secondary);
+}
+
+.mobileOnly {
+  display: none;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.phoneLink {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.phoneIcon {
+  font-size: 1.25rem;
+}
+
+.ctaButton {
+  background-color: var(--color-accent);
+  color: var(--color-neutral-dark);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-md);
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.menuButton {
+  display: none;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  z-index: 1001;
+}
+
+.hamburger {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.2s;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: transform 0.3s;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+.hamburgerOpen {
+  background-color: transparent;
+}
+
+.hamburgerOpen::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.hamburgerOpen::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+@media (max-width: 1024px) {
+  .navLinks {
+    gap: var(--spacing-md);
+  }
+  
+  .phoneNumber {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-white);
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+    flex-direction: column;
+  }
+
+  .navOpen {
+    transform: translateX(0);
+  }
+
+  .navLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xl);
+  }
+
+  .navLinks a {
+    font-size: 1.25rem;
+  }
+
+  .mobileOnly {
+    display: block;
+    width: 100%;
+  }
+
+  .ctaButtonMobile {
+    display: block;
+    background-color: var(--color-accent);
+    color: var(--color-neutral-dark);
+    padding: 1rem;
+    text-align: center;
+    border-radius: var(--border-radius-md);
+    font-weight: 700;
+  }
+
+  .ctaButton {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+  }
+}

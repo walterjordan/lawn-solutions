@@ -1,0 +1,150 @@
+.footer {
+  background-color: var(--color-neutral-dark);
+  color: var(--color-white);
+  padding: var(--spacing-3xl) 0 var(--spacing-xl);
+  margin-top: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: var(--spacing-3xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+.logo span {
+  color: var(--color-secondary);
+}
+
+.description {
+  color: #ccc;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+  max-width: 300px;
+}
+
+.socials {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.socials a {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-full);
+  font-weight: 700;
+  font-size: 0.75rem;
+  transition: background-color 0.2s;
+}
+
+.socials a:hover {
+  background-color: var(--color-secondary);
+}
+
+.title {
+  color: var(--color-white);
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -var(--spacing-sm);
+  width: 40px;
+  height: 2px;
+  background-color: var(--color-secondary);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.links a {
+  color: #ccc;
+  font-size: 0.9375rem;
+  transition: color 0.2s;
+}
+
+.links a:hover {
+  color: var(--color-secondary);
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  color: #ccc;
+  font-size: 0.9375rem;
+}
+
+.contactInfo a {
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: var(--spacing-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  color: #888;
+  font-size: 0.875rem;
+}
+
+.legalLinks {
+  display: flex;
+  gap: var(--spacing-xl);
+}
+
+.legalLinks a {
+  color: #888;
+  font-size: 0.875rem;
+}
+
+.legalLinks a:hover {
+  color: var(--color-white);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    text-align: center;
+  }
+}

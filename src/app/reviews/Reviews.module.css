@@ -1,0 +1,224 @@
+.page {
+  background-color: var(--color-white);
+}
+
+.hero {
+  background-color: var(--color-primary);
+  padding: var(--spacing-3xl) 0;
+  text-align: center;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-3xl);
+  margin-top: var(--spacing-xl);
+}
+
+.statBox {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.statValue {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 4px;
+}
+
+.reviewsListSection {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--color-neutral-light);
+}
+
+.reviewsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.reviewCard {
+  background-color: var(--color-white);
+  padding: var(--spacing-2xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.rating {
+  color: var(--color-accent);
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.reviewText {
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-xl);
+  flex-grow: 1;
+}
+
+.reviewMeta {
+  border-top: 1px solid #eee;
+  padding-top: var(--spacing-md);
+}
+
+.reviewerName {
+  display: block;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.reviewerLocation {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.reviewService {
+  font-size: 0.75rem;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* Form Section */
+.submitSection {
+  padding: var(--spacing-3xl) 0;
+}
+
+.formContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--color-white);
+  padding: var(--spacing-3xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid #eee;
+}
+
+.formTitle {
+  text-align: center;
+  margin-bottom: var(--spacing-xs);
+}
+
+.formSubtitle {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.formGroup label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.formGroup input, 
+.formGroup select, 
+.formGroup textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius-md);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.submitBtn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1rem;
+  border-radius: var(--border-radius-md);
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-top: var(--spacing-md);
+}
+
+.note {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.successMessage {
+  text-align: center;
+  padding: var(--spacing-3xl) 0;
+}
+
+.successMessage h3 {
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+/* CTA Strip */
+.ctaStrip {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-3xl) 0;
+  text-align: center;
+}
+
+.ctaTitle {
+  color: var(--color-white);
+  font-size: 2rem;
+  margin-bottom: var(--spacing-2xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 992px) {
+  .reviewsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .reviewsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+
+  .statBox {
+    width: 200px;
+  }
+}
